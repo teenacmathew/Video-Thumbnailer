@@ -1,0 +1,10 @@
+module VideoResizeGem
+
+  class Uploader
+require "carrierwave"
+    def self.upload?
+      puts "YOU ARE AWESOME!!"
+    end
+  end
+
+end
