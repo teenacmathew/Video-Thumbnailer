@@ -3,7 +3,7 @@ module CarrierWave
  module VideoResizeGem
   class Uploader
     def self.upload?
-      puts "YOU ARE AWESOME!!"
+      puts "UPLOAD SUCCESSFUL!!"
     end
   end
  end
