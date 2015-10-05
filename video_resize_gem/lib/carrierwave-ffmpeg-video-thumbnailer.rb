@@ -1,10 +1,11 @@
 require "carrierwave"
 module CarrierWave
- module VideoResizeGem
-  class Uploader
-    def self.upload?
+ module Video
+  class Thumbnailer
+    def self.generate_successful?
       puts "UPLOAD SUCCESSFUL!!"
     end
   end
  end
 end
+
