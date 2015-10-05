@@ -1,10 +1,6 @@
 module VideoResizeGem
 
-  class Uploader < CarrierWave::Uploader::Base
-
-    require "carrierwave"
-    require "mini_magick"
-    require "rmagick"
+  class Uploader
 
     def self.upload?
       puts "YOU ARE AWESOME!!"
