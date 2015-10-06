@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
-  s.name = %q{carrierwave-ffmpeg-video-thumbnailer}
+  s.name = %q{thumbnailer}
   s.version = "0.0.0"
   s.date = %q{2015-09-29}
   s.summary = %q{video_resize_gem compresses the video uploaded.}
-  s.files = ["lib/carrierwave-ffmpeg-video-thumbnailer.rb"]
+  s.files = ["lib/CarrierWave/Video/thumbnailer.rb"]
   s.authors = ["Radhika","Teena"]
   s.require_paths = ["lib"]
   s.add_dependency 'carrierwave', '>= 0'
