@@ -1,7 +1,7 @@
 require "carrierwave"
 module CarrierWave
  module Video
-  class Thumbnailer
+  class Videothumbnailer
     def self.generate_successful?
       puts "UPLOAD SUCCESSFUL!!"
     end
