@@ -2,7 +2,6 @@ require "video_thumbnailer/version"
 require 'open3'
 require_relative "video_thumbnailer/generate_command"
 
-
 module  VideoThumbnailer
 
   def generate_thumb options = {}
@@ -32,16 +31,4 @@ module  VideoThumbnailer
     exit_code
   end
 
-  def set_rotation(degree)
-    case degree
-    when 90
-      %Q( -vf "transpose=1")
-    when 180
-      %Q( -vf vflip )
-    when 270
-      %Q( -vf "transpose=2")
-    else
-      " "
-    end
-  end
 end

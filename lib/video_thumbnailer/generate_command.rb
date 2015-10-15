@@ -16,4 +16,20 @@ class GenerateCommand
 	 	cmd += %Q( -vframes 1  #{output_path})
 	  	cmd
 	 end
+
+	 private
+
+  	def set_rotation(degree)
+    	case degree
+    	when 90
+    	  %Q( -vf "transpose=1")
+   		 when 180
+      	  %Q( -vf vflip )
+    	 when 270
+      	   %Q( -vf "transpose=2")
+   		 else
+     		 " "
+    	end
+ 	 end
+  
 end
