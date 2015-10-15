@@ -3,10 +3,11 @@ require 'open3'
 require_relative "video_thumbnailer/generate_command"
 
 module  VideoThumbnailer
+  include Thumbnail
 
   def generate_thumb options = {}
     tmp_path = File.join( File.dirname(current_path), "tmpfile.jpg" )
-    thumbnail = GenerateCommand.new(current_path, tmp_path)
+    thumbnail = Thumbnail::GenerateCommand.new(current_path, tmp_path)
     cmd = thumbnail.generate_command(options)
     exit_code = nil
     error = nil

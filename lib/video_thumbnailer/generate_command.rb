@@ -1,3 +1,4 @@
+module Thumbnail
 class GenerateCommand
 	 attr_reader :input_path, :output_path
 
@@ -32,4 +33,5 @@ class GenerateCommand
     	end
  	 end
   
+end
 end
