@@ -31,7 +31,7 @@ module VideoThumbnailer
     end
 
     def method_missing(name, *args)
-      return "#{CLI_KEY[name]} #{args[0]}"
+      "#{CLI_KEY[name]} #{args[0]}" if CLI_KEY.has_key? name
     end
   end
 end

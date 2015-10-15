@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["teena@qburst.com"]
   spec.summary       = ""
   spec.description   = ""
-  spec.files         = ["lib/video_thumbnailer/version.rb","lib/video_thumbnailer.rb","lib/video_thumbnailer/generate_command.rb"]
+  spec.files         = ["lib/video_thumbnailer/version.rb", "lib/video_thumbnailer/options.rb", "lib/video_thumbnailer.rb","lib/video_thumbnailer/generate_command.rb"]
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
