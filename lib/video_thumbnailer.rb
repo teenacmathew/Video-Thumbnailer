@@ -1,6 +1,7 @@
 require "video_thumbnailer/version"
 require 'open3'
-require_relative "video_thumbnailer/generate_command"
+require "video_thumbnailer/generate_command"
+require "video_thumbnailer/options"
 
 module  VideoThumbnailer
   include Thumbnail
@@ -17,7 +18,7 @@ module  VideoThumbnailer
       exit_code = wait_thr.value
     end
     handle_exit_code(exit_code, error)
-    File.rename  "#{tmp_path}", current_path
+    File.rename  tmp_path, current_path
   end
 
   private
