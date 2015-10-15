@@ -1,8 +1,6 @@
 # VideoThumbnailer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/video_thumbnailer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A thumbnailer plugin for Carrierwave. This can be used to generate thumbnails for videos uploaded with carrier-wave.
 
 ## Installation
 
@@ -22,8 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+In the Rails app/uploaders/filename.rb, call the generate_thumb function with options.
+The options are passed as hash to this function.
+The options are:
+height - Height of the thumbnail to be generated.
+width - width of the thumbnail to be generated.
+rotate - orientation of the thumbnail imgae generated.(Can be 90/180/270)
+time - The time in the video at which the thumbnail must be generated.
+ 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -38,4 +42,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

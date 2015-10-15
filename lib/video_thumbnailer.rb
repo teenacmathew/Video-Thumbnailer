@@ -4,11 +4,10 @@ require "video_thumbnailer/generate_command"
 require "video_thumbnailer/options"
 
 module  VideoThumbnailer
-  include Thumbnail
-
+  
   def generate_thumb options = {}
     tmp_path = File.join( File.dirname(current_path), "tmpfile.jpg" )
-    thumbnail = Thumbnail::GenerateCommand.new(current_path, tmp_path)
+    thumbnail = VideoThumbnailer::GenerateCommand.new(current_path, tmp_path)
     cmd = thumbnail.generate_command(options)
     exit_code = nil
     error = nil
