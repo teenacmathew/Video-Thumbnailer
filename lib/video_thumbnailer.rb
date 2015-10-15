@@ -1,6 +1,7 @@
 require "video_thumbnailer/version"
 require 'open3'
-require_relative "video_thumbnailer/generate_command"
+require "video_thumbnailer/generate_command"
+require "video_thumbnailer/options"
 
 module  VideoThumbnailer
 
