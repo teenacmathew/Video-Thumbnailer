@@ -20,6 +20,15 @@ module VideoThumbnailer
       result.join(' ')
     end
 
+    def file_extension value
+      case value
+      when 'jpeg' then %Q(-c mjpeg)
+      when  'png' then %Q(-c png)
+      else
+        " "
+      end
+    end
+
     def rotate value
       case value
       when 90  then %Q(-vf transpose=1)
