@@ -12,6 +12,5 @@ module VideoThumbnailer
       options = VideoThumbnailer::Options.new(options)
       %Q(ffmpeg #{options.to_options} #{output_path} -i #{input_path})
     end
-
   end
 end
