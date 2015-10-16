@@ -21,7 +21,7 @@ module  VideoThumbnailer
       exit_code = wait_thr.value
     end
     handle_exit_code(exit_code, error, logger)
-    File.rename  tmp_path, current_path
+    File.rename tmp_path, current_path
   end
 
   private
