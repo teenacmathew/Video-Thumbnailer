@@ -21,13 +21,49 @@ Or install it yourself as:
 ## Usage
 
 In the Rails app/uploaders/filename.rb, call the generate_thumb function with options.
-The options are passed as hash to this function.
+The options are passed as hash to this function, can be also empty.
+
 The options are:
-height - Height of the thumbnail to be generated.
-width - width of the thumbnail to be generated.
-rotate - orientation of the thumbnail imgae generated.(Can be 90/180/270)
-time - The time in the video at which the thumbnail must be generated.
- 
+
+size - The height x width of the thumbnail to be generated, by default will take the same size of that of the video.
+file_extension - Format of the file to be saved, by default the form at will be jpeg.
+rotate - Orientation of the thumbnail imgae generated(Can be 90/180/270).
+time_frame - The time in the video at which the thumbnail must be generated.
+quality - Quality of the file to be saved.
+
+## Examples
+
+Here's a working example:
+
+In your Rails app/uploaders/video_uploader.rb:
+
+class VideoUploader < CarrierWave::Uploader::Base
+  include CarrierWave::RMagick
+  include VideoThumbnailer
+  storage :file
+
+  version :thumb do
+     process generate_thumb:[{size:"200 x 200",:quality => "5", :time_frame => "00:0:04", :file_extension => "jpeg", :rotate => 180 }]
+    def full_filename for_file
+      png_name for_file, version_name, "jpeg"
+    end
+  end
+
+  def png_name for_file, version_name, format
+    %Q{#{version_name}_#{for_file.chomp(File.extname(for_file))}.#{format}}
+  end
+
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
+  def extension_white_list
+    %w( mp4 jpg jpeg gif png )
+  end
+
+end
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
