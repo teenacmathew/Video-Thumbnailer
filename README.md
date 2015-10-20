@@ -25,11 +25,11 @@ The options are passed as hash to this function, can be also empty.
 
 The options are:
 
-size - The height x width of the thumbnail to be generated, by default will take the same size of that of the video.
-file_extension - Format of the file to be saved, by default the form at will be jpeg.
-rotate - Orientation of the thumbnail imgae generated(Can be 90/180/270).
-time_frame - The time in the video at which the thumbnail must be generated.
-quality - Quality of the file to be saved.
+*size - The height x width of the thumbnail to be generated, by default will take the same size of that of the video.
+*file_extension - Format of the file to be saved, by default the form at will be jpeg.
+*rotate - Orientation of the thumbnail imgae generated(Can be 90/180/270).
+*time_frame - The time in the video at which the thumbnail must be generated.
+*quality - Quality of the file to be saved.
 
 ## Examples
 
@@ -37,6 +37,7 @@ Here's a working example:
 
 In your Rails app/uploaders/video_uploader.rb:
 
+```
 class VideoUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
   include VideoThumbnailer
@@ -62,7 +63,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   end
 
 end
-
+```
 
 ## Development
 
