@@ -25,11 +25,12 @@ The options are passed as hash to this function, can be also empty.
 
 The options are:
 
-* size - The height x width of the thumbnail to be generated, by default will take the same size of that of the video.
-* file_extension - Format of the file to be saved, by default the format at will be jpeg.
-* rotate - Orientation of the thumbnail image generated(Can be 90/180/270).
-* time_frame - The time in the video at which the thumbnail must be generated.
-* quality - Quality of the file to be saved.
+* size - The height x width of the thumbnail to be generated, by default will take the same size of that of the video, type is string.
+* file_extension - Format of the file to be saved, by default the format at will be "jpeg", type is string.
+* rotate - Orientation of the thumbnail image generated(Can be 90/180/270), type is integer.
+* quality - Quality of the file to be saved, type is integer.
+* time_frame - The time in the video at which the thumbnail must be generated, type is string.
+
 
 ## Examples
 
