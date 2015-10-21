@@ -2,6 +2,17 @@
 
 A thumbnailer plugin for Carrierwave. This can be used to generate thumbnails for videos uploaded with carrier-wave.
 
+## Requirements
+
+ This only works with the installation of ffmpeg.
+
+[Download/Ubuntu](https://gist.githubusercontent.com/xdamman/e4f713c8cd1a389a5917/raw/7ebe0b7010ad59a61ddccf5c455d226c843584dc/install_ffmpeg_ubuntu.sh)
+
+And then execute:
+
+    $ sudo bash filename.sh
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
