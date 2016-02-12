@@ -56,7 +56,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   storage :file
 
   version :thumb do
-     process generate_thumb:[{size:"200 x 200",:quality => 5, :time_frame => "00:0:04", :file_extension => "jpeg", :rotate => 180 }]
+     process generate_thumb:[{size:"200x200",:quality => 5, :time_frame => "00:0:04", :file_extension => "jpeg", :rotate => 180 }]
     def full_filename for_file
       png_name for_file, version_name, "jpeg"
     end
